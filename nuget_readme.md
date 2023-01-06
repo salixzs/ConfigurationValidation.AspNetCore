@@ -100,6 +100,7 @@ app.UseConfigurationValidationErrorPage();
 // ...
 ```
 
+![Error page](https://raw.githubusercontent.com/salixzs/ConfigurationValidation.AspNetCore/main/DocImages/config-error.jpg)
 
 ## Health check
 
