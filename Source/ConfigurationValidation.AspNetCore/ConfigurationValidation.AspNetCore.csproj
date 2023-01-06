@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <LangVersion>latest</LangVersion>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>true</ImplicitUsings>
+    <NoWarn>1701;1702;IDE0008;IDE0130;IDE0160;CA1848;CA2254</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- === NuGet package description properties ===-->
+  <PropertyGroup Label="NuGet properties">
+    <PackageId>ConfigurationValidation.AspNetCore</PackageId>
+    <Authors>Anrijs Vitolins;GitHub contributors</Authors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugSymbols>true</DebugSymbols>
+    <PackageTags>aspnet;aspnetcore;api;healthcheck;configuration;validation</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>config-validation.png</PackageIcon>
+    <Description>
+
+    </Description>
+    <PackageReadmeFile>nuget_readme.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/salixzs/ConfigurationValidation.AspNetCore</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/salixzs/ConfigurationValidation.AspNetCore</RepositoryUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <Description>
+Integration of Configuration validation with AspNet (Core) application.
+    </Description>
+    <PackageReleaseNotes>
+Initial: Moved from aspNetCore.Utilities meta-package.
+    </PackageReleaseNotes>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ConfigurationValidation" Version="1.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.Abstractions" Version="7.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="7.0.0" />
+    <PackageReference Include="Microsoft.Net.Http.Headers" Version="2.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="PageHtml.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>PageHtml.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="PageHtml.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PageHtml.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../config-validation.png" Pack="true" Visible="false" PackagePath="" />
+    <None Include="../../nuget_readme.md" Pack="true" Visible="false" PackagePath="" />
+  </ItemGroup>
+
+</Project>
