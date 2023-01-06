@@ -109,6 +109,8 @@ app.UseConfigurationValidationErrorPage();
 // ...
 ```
 
+![Config error page](./DocImages/config-error.jpg)
+
 
 ## Health check
 
