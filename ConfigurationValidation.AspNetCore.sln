@@ -3,7 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33209.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigurationValidation.AspNetCore", "Source/ConfigurationValidation.AspNetCore/ConfigurationValidation.AspNetCore.csproj", "{8BE9D3EA-249F-4DD0-8916-74650D856E12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConfigurationValidation.AspNetCore", "Source\ConfigurationValidation.AspNetCore\ConfigurationValidation.AspNetCore.csproj", "{8BE9D3EA-249F-4DD0-8916-74650D856E12}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{BCA0B23D-9AF1-46E5-B831-B3297EAEDD16}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		.github\workflows\build_test.yml = .github\workflows\build_test.yml
+		nuget_readme.md = nuget_readme.md
+		.github\workflows\publish_nuget.yml = .github\workflows\publish_nuget.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
