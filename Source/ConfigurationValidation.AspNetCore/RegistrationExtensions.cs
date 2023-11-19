@@ -24,7 +24,7 @@ public static class RegistrationExtensions
     /// </summary>
     /// <param name="app">The ASP.NET application.</param>
     public static void UseConfigurationValidationErrorPage(this IApplicationBuilder app) =>
-        app.UseWhen(context => context.Request.Path.Value.Equals("/", StringComparison.OrdinalIgnoreCase),
+        app.UseWhen(context => context.Request.Path.Value == null || context.Request.Path.Value.Equals("/", StringComparison.OrdinalIgnoreCase),
             appBuilder => appBuilder.UseMiddleware<ConfigurationValidationMiddleware>());
 
     /// <summary>

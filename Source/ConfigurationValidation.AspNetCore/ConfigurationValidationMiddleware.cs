@@ -56,7 +56,13 @@ public class ConfigurationValidationMiddleware
         var errorTable = new StringBuilder();
         foreach (var failure in failures)
         {
-            errorTable.Append($"<tr><td>{failure.ConfigurationSection}</td><td>{failure.ConfigurationItem}</td><td>{failure.ValidationMessage}</td></tr>");
+            errorTable.Append("<tr><td>");
+            errorTable.Append(failure.ConfigurationSection);
+            errorTable.Append("</td><td>");
+            errorTable.Append(failure.ConfigurationItem);
+            errorTable.Append("</td><td>");
+            errorTable.Append(failure.ValidationMessage);
+            errorTable.Append("</td></tr>");
         }
 
         errorPage = errorPage.Replace("{Validations}", errorTable.ToString());
@@ -68,7 +74,12 @@ public class ConfigurationValidationMiddleware
 
         // Clear() content.
         response.StatusCode = 200;
-        response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = null;
+        var responseFeature = response.HttpContext.Features.Get<IHttpResponseFeature>();
+        if (responseFeature != null)
+        {
+            responseFeature.ReasonPhrase = null;
+        }
+
         response.Headers.Clear();
         if (response.Body.CanSeek)
         {
