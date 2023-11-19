@@ -6,7 +6,7 @@ Provides three ways of handling invalid configurations:
 - Root page (yellow page of error) displaying incorrect configuration values
 - Health check for configuration
 
-Also provides extension shorcuts for configuration validation usage in Asp.Net application for easy functionality registrations.
+Also provides extension shortcuts for configuration validation usage in Asp.Net application for easy functionality registrations.
 
 ### Member of Salix.AspNetCore.Utilities packages
 
