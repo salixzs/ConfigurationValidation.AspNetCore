@@ -6,7 +6,7 @@ Provides three ways of handling invalid configurations:
 - Root page (yellow page of error) displaying incorrect configuration values
 - Health check for configuration
 
-Also provides extension shorcuts for configuration validation usage in Asp.Net application for easy functionality registrations.
+Also provides extension shortcuts for configuration validation usage in Asp.Net application for easy functionality registrations.
 
 [![Build & Tests](https://github.com/salixzs/ConfigurationValidation.AspNetCore/actions/workflows/build_test.yml/badge.svg?branch=main)](https://github.com/salixzs/ConfigurationValidation.AspNetCore/actions/workflows/build_test.yml)
 [![Nuget version](https://img.shields.io/nuget/v/ConfigurationValidation.AspNetCore.svg)](https://www.nuget.org/packages/ConfigurationValidation.AspNetCore/)
