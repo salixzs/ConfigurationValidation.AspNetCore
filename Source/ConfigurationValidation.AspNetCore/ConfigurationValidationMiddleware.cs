@@ -23,7 +23,7 @@ public class ConfigurationValidationMiddleware
     /// Overridden method which gets invoked by HTTP middleware stack.
     /// </summary>
     /// <param name="httpContext">The HTTP context.</param>
-    /// <param name="validatableConfigurations">Validatable configuration itens collection.</param>
+    /// <param name="validatableConfigurations">Validatable configuration items collection.</param>
     /// <param name="logger">Logger instance.</param>
     /// <exception cref="ArgumentNullException">HTTP Context does not exist (never happens).</exception>
 #pragma warning disable RCS1046 // Suffix Async is not expected by ASP.NET Core implementation
